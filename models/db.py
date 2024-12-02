@@ -3,7 +3,7 @@ from ..setting import db_settings
 from .user import UserSchema
 from .bookmark import BookmarkSchema
 
-engine = create_engine(db_settings.db_url, echo=True)
+engine = create_engine(db_settings.db_url, echo=False)
 
 def create_db_and_tables():
     SQLModel.metadata.create_all(engine)
